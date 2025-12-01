@@ -1,0 +1,51 @@
+# Laravel
+/projeklaravel1/vendor/
+/projeklaravel1/node_modules/
+/projeklaravel1/public/hot
+/projeklaravel1/public/storage
+/projeklaravel1/storage/*.key
+/projeklaravel1/.env
+/projeklaravel1/.env.backup
+/projeklaravel1/.phpunit.result.cache
+/projeklaravel1/Homestead.json
+/projeklaravel1/Homestead.yaml
+/projeklaravel1/npm-debug.log
+/projeklaravel1/yarn-error.log
+
+# Flutter
+/portal_berita_flutter/.dart_tool/
+/portal_berita_flutter/.flutter-plugins
+/portal_berita_flutter/.flutter-plugins-dependencies
+/portal_berita_flutter/.packages
+/portal_berita_flutter/.pub-cache/
+/portal_berita_flutter/.pub/
+/portal_berita_flutter/build/
+/portal_berita_flutter/.idea/
+/portal_berita_flutter/*.iml
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code related
+.vscode/
+
+# Database
+*.sqlite
+*.sqlite-journal
+
+# OS
+Thumbs.db
