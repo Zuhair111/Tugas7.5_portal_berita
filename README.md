@@ -55,9 +55,20 @@ DB_DATABASE=C:\laragon\www\projekberita\projeklaravel1\database\database.sqlite
 .\artisan.bat key:generate
 ```
 
-### 5. Run Migrasi Database
+### 5. Run Migrasi Database (Optional - Database sudah include)
+Database SQLite sudah disertakan dengan sample data. Jika ingin reset database:
+```powershell
+# Backup database lama (optional)
+Copy-Item database\database.sqlite database\database.backup.sqlite
+
+# Reset database
+.\artisan.bat migrate:fresh --seed
+```
+
+Jika database belum ada, jalankan:
 ```powershell
 .\artisan.bat migrate
+.\artisan.bat db:seed
 ```
 
 ### 6. Install Laravel Passport
@@ -440,10 +451,9 @@ Output: `build/app/outputs/bundle/release/app-release.aab`
 ```powershell
 # 1. Start Laragon Apache
 
-# 2. Backend
+# 2. Backend (database sudah include, tinggal install Passport)
 cd c:\laragon\www\projekberita\projeklaravel1
 composer install
-.\artisan.bat migrate
 .\artisan.bat passport:install --force
 
 # 3. Frontend
@@ -454,6 +464,18 @@ flutter pub get
 
 # 5. Run
 flutter run -d DEVICE_ID
+```
+
+**Database sudah include dengan sample data:**
+- 3 users (email: user@example.com, password: password)
+- 10 artikel
+- 10 kategori
+- 2 komentar
+
+**Untuk reset database (optional):**
+```powershell
+cd projeklaravel1
+.\artisan.bat migrate:fresh --seed
 ```
 
 **Login Credentials (default):**
