@@ -43,8 +43,7 @@
 # Visual Studio Code related
 .vscode/
 
-# Database
-*.sqlite
+# Database - keep database.sqlite for distribution
 *.sqlite-journal
 
 # OS
